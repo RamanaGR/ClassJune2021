@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FREE CRM Application Test Automation Test Suite" parallel="tests">
+
+    <test name="Automation Framework Test Cases Opera">
+        <parameter name="browser" value="opera"/>
+        <classes>
+            <class name="com.edu.frameworktest.test.LoginPageTest"/>
+            <!--            <class name="com.edu.frameworktest.test.LandingPageTest"/>-->
+            <!--  <class name="com.edu.frameworktest.test.ContactsPageTest"/>-->
+        </classes>
+    </test>
+    <test name="Automation Framework Test Cases">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+
+            <class name="com.edu.frameworktest.test.LoginPageTest"/>
+            <!--            <class name="com.edu.frameworktest.test.LandingPageTest"/>-->
+            <!--  <class name="com.edu.frameworktest.test.ContactsPageTest"/>-->
+        </classes>
+    </test>
+</suite>
