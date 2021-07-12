@@ -19,7 +19,6 @@ public class LoginPageTest extends BaseClass {
     }
 
     @BeforeMethod
-
     public void setup() {
         init();
         loginPage = new LoginPage();
@@ -30,14 +29,14 @@ public class LoginPageTest extends BaseClass {
 //        homePage.clickOnContacts();// for ContactsPage
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void loginPageTitle() {
 
         String title = loginPage.verifyLoginPageTitle();//Title
         Assert.assertEquals(title, "Cogmento CRM");
     }
 
-    @Test
+    @Test(enabled = false)
     public void loginTest() {
         String un = prop.getProperty("username");
         String pw = prop.getProperty("password");

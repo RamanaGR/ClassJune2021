@@ -28,13 +28,13 @@ public class LandingPageTest extends BaseClass {
         Assert.assertEquals(expected, actual);
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void testLandingPageLogo() {
         boolean isLogo = landingPage.verifyLogo();
         Assert.assertTrue(isLogo);
     }
 
-    @Test
+    @Test(enabled = false)
     public void testLoginButton() {
         boolean isLogin = landingPage.verifyLoginButton();
         landingPage.login();

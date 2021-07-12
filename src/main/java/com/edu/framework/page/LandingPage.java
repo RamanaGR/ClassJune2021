@@ -2,6 +2,7 @@ package com.edu.framework.page;
 
 import com.edu.framework.base.BaseClass;
 
+import com.edu.framework.util.TestUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,8 +46,9 @@ public class LandingPage extends BaseClass {
             if (gotIt.isDisplayed())
                 gotIt.click();
         } catch (Exception e) {
-
+        e.getMessage();
         }
+        TestUtils.waitForElement(driver,login,30);
         login.click();
         return new LoginPage();
     }
