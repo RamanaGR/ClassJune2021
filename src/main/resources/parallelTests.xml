@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FREE CRM Application Test Automation Test Suite" parallel="tests">
+
+    <test name="Automation Framework Test Cases Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.edu.frameworktest.test.Parallel"/>
+        </classes>
+    </test>
+
+    <test name="Automation Framework Test Cases Opera">
+        <parameter name="browser" value="opera"/>
+        <classes>
+            <class name="com.edu.frameworktest.test.Parallel"/>
+        </classes>
+    </test>
+
+</suite>

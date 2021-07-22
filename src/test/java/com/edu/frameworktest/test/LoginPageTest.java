@@ -5,9 +5,12 @@ import com.edu.framework.page.HomePage;
 import com.edu.framework.page.LandingPage;
 import com.edu.framework.page.LoginPage;
 
+import com.edu.framework.util.ExtentReportConfig;
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import java.lang.reflect.Method;
 
 public class LoginPageTest extends BaseClass {
     LoginPage loginPage;
@@ -19,7 +22,7 @@ public class LoginPageTest extends BaseClass {
     }
 
     @BeforeMethod
-    public void setup() {
+    public void setup(Method method) {
         init();
         loginPage = new LoginPage();
         homePage = new HomePage();
@@ -27,6 +30,7 @@ public class LoginPageTest extends BaseClass {
         landingPage.login();//for login page
 //        loginPage.login("","");//for homepage
 //        homePage.clickOnContacts();// for ContactsPage
+        ExtentReportConfig.startTest(method.getName(),"");
     }
 
     @Test(enabled = true)

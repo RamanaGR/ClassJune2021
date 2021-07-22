@@ -2,12 +2,15 @@ package com.edu.frameworktest.test;
 
 import com.edu.framework.base.BaseClass;
 import com.edu.framework.page.LandingPage;
+import com.edu.framework.util.ExtentReportConfig;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import java.lang.reflect.Method;
 
 public class LandingPageTest extends BaseClass {
     LandingPage landingPage;
@@ -16,9 +19,10 @@ public class LandingPageTest extends BaseClass {
     }
 
     @BeforeMethod
-    public void setUp() {
+    public void setUp(Method method) {
         init();
        landingPage = new LandingPage();
+        ExtentReportConfig.startTest(method.getName(),"");
     }
 
     @Test(enabled = true)
@@ -34,7 +38,7 @@ public class LandingPageTest extends BaseClass {
         Assert.assertTrue(isLogo);
     }
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void testLoginButton() {
         boolean isLogin = landingPage.verifyLoginButton();
         landingPage.login();

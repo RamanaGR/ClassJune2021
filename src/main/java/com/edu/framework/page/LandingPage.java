@@ -1,8 +1,8 @@
 package com.edu.framework.page;
 
 import com.edu.framework.base.BaseClass;
-
 import com.edu.framework.util.TestUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,11 +23,14 @@ public class LandingPage extends BaseClass {
 
     public LandingPage() {
         PageFactory.initElements(driver, this);
+        logger = Logger.getLogger(LandingPage.class);
+        logger.info("*********We Are in Landing Page**************");
     }
 
 
     public String verifyTitle() {
         String title = driver.getTitle();
+        logger.info("Getting the title of Landing page");
         return title;
     }
 
@@ -50,6 +53,7 @@ public class LandingPage extends BaseClass {
         }
         TestUtils.waitForElement(driver,login,30);
         login.click();
+        logger.info("Clicking on Login in landing page");
         return new LoginPage();
     }
 

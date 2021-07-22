@@ -22,6 +22,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseClass {
     public static WebDriver driver;
     public static Properties prop;
+    public static Logger logger=null;
 
     public BaseClass() {
         try {
@@ -32,6 +33,9 @@ public class BaseClass {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        String log4jPath = System.getProperty("user.dir") + "/src/main/resources/log4j.properties";
+        PropertyConfigurator.configure(log4jPath);
     }
 
     public static void init() {

@@ -49,11 +49,13 @@ public class TestUtils {
     //obj[2][1]=4
     public static Object[][] getTestData(String sheetName) {
         FileInputStream file = null;
+
         try {
             file = new FileInputStream(TESTDATA_FILE_PATH);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
         try {
             book = WorkbookFactory.create(file);
         } catch (InvalidFormatException e) {

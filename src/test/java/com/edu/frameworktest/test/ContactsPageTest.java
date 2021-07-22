@@ -6,11 +6,14 @@ import com.edu.framework.page.HomePage;
 import com.edu.framework.page.LandingPage;
 import com.edu.framework.page.LoginPage;
 
+import com.edu.framework.util.ExtentReportConfig;
 import com.edu.framework.util.TestUtils;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.io.IOException;
+import java.lang.reflect.Member;
+import java.lang.reflect.Method;
 
 public class ContactsPageTest extends BaseClass {
     LoginPage loginPage;
@@ -24,7 +27,7 @@ public class ContactsPageTest extends BaseClass {
     }
 
     @BeforeMethod
-    public void setup() {
+    public void setup(Method method) {
         init();
         loginPage = new LoginPage();
         hp = new HomePage();
@@ -34,6 +37,7 @@ public class ContactsPageTest extends BaseClass {
         hp = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
         //lp.clickGotIt();
         hp.clickOnContacts();
+        ExtentReportConfig.startTest(method.getName(),"");
     }
 
     @Test(priority = 1,enabled = false)

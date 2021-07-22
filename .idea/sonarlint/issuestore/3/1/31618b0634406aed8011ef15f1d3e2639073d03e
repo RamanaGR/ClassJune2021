@@ -1,0 +1,31 @@
+
+@
+java:S1444"*Make this "public static book" field final(êê
+A
+java:S1444"+Make this "public static sheet" field final(Üè·ä
+f
+java:S1104"PMake book a static final constant or non-public and provide accessors if needed.(êê
+g
+java:S1104"QMake sheet a static final constant or non-public and provide accessors if needed.(Üè·ä
+J
+java:S1128"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜
+—
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ä“Õ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(„ÏÄ÷
+D
+java:S6212"/Declare this local variable with "var" instead.(Ï³ä
+D
+java:S6212%"/Declare this local variable with "var" instead.(Ï³ä
+Q	java:S125+"<This block of commented-out lines of code should be removed.(ê¤Åô
+Z
+java:S2147?"DCombine this catch with the one at line 61, which has the same body.(ï­£Ä
+E
+java:S6212E"/Declare this local variable with "var" instead.(„úÈò
+V	java:S125C"<This block of commented-out lines of code should be removed.(â‘ù…şÿÿÿÿ
+V	java:S125G"<This block of commented-out lines of code should be removed.(ÁûÉøÿÿÿÿ
+J
+java:S6212H"/Declare this local variable with "var" instead.(é‚Éöøÿÿÿÿ
+E
+java:S6212I"/Declare this local variable with "var" instead.(ï¨‰¶
+Q	java:S125K"<This block of commented-out lines of code should be removed.(©ğŞï

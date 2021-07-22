@@ -1,0 +1,10 @@
+
+~
+java:S1488&"cImmediately return this expression instead of assigning it to the temporary variable "isDisplayed".(…„ƒÊüÿÿÿÿ
+z
+java:S1488+"_Immediately return this expression instead of assigning it to the temporary variable "isLogin".(Œï©áøÿÿÿÿ
+{
+java:S1488B"`Immediately return this expression instead of assigning it to the temporary variable "isSignUp".(ÜÁ©Öùÿÿÿÿ
+P
+java:S1128":Remove this unused import 'org.openqa.selenium.WebDriver'.(ñšÿÀ
+Q	java:S125"<This block of commented-out lines of code should be removed.(™ş†à
